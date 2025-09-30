@@ -1,16 +1,26 @@
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+/*@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+*/@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
 @import "tailwindcss";
 
 @theme {
-    --font-IBMPlexSans: "IBMPlexSans", sans-serif;
-    --font-IBMPlexMono: "IBMPlexMono", Monospace;
+    /*--font-IBMPlexSans: "IBMPlexSans", sans-serif;*/
+    --font-IBMPlexMono: "IBM Plex Mono", Monospace;
+    --font-NunitoSans: "Nunito Sans", sans-serif;
 
-    
-    @keyframes{
-        'infinite-scroll': {
-            from: { transform: translateX(0) },
-            to: { transform: translateX(-100) }
+
+    --color-accent: #0083b2;
+    --color-accent-2: #cb9000;
+
+    /*fox this make it run when not hovering anymore*/
+    --animate-fade-underline: fade-underline 0.15s ease-out forwards;  
+    @keyframes fade-underline {    
+        0%  {
+            opacity: 0;
+            transform: translateY(0)
         }
+        100% {      
+            opacity: 1;
+            transform: translateY(0.2em);    
+        }    
     }
-    
 }
