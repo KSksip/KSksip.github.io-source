@@ -62,7 +62,7 @@ const backEndTech = ref([
 
 <template>
     <div class="py-8">
-        <div class="w-200 mx-auto tracking-wide leading-10">
+        <div class="w-200 mx-auto tracking-wide leading-10 px-5 md:px-0">
             <h1 class="text-5xl font-semibold text-accent">Hi! (ᵔᵕᵔ)◜</h1>
             <p class="text-xl pt-2 ps-1.5">
                 Hello! My name is <span class="text-accent font-bold">Skip</span>. I'm a highschool student, and I'm currently working towards my end goal of being a <span class="text-accent font-bold">full-stack developer</span>!
@@ -85,7 +85,7 @@ const backEndTech = ref([
 
         <div class="mx-auto w-200 mt-12">
             <!--<h1 class="text-5xl font-bold text-accent">Technologies</h1>-->
-            <div class="border-1 border-slate-200 rounded-md inset-shadow-sm px-8 pt-4 pb-8 mt-2">
+            <div class="border-1 border-slate-200 md:rounded-md inset-shadow-sm px-8 pt-4 pb-8 mt-2">
                 <h2 class="text-2xl font-bold text-accent">Front-end</h2>
                 <div class="flex gap-2 mt-2 flex-wrap">
                     <div v-for="item in frontEndTech"

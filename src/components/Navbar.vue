@@ -15,8 +15,8 @@ const feature = ref();
             </a>
         </div>
         <div class="justify-center gap-6">
-            <router-link to="/">Home</router-link>
-            <router-link to="/projects">Projects</router-link>
+            <!--<router-link to="/">Home</router-link>
+            <router-link to="/projects">Projects</router-link>-->
         </div>
 
         <div>
