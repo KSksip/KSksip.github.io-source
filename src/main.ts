@@ -17,6 +17,8 @@ import {
     CoGo,
     SiExpress,
     SiSqlite,
+    BiMoonStarsFill,
+    BiMoonStars,
 } from "oh-vue-icons/icons";
 
 addIcons(
@@ -31,7 +33,9 @@ addIcons(
     IoLogoCss3,
     CoGo,
     SiExpress,
-    SiSqlite
+    SiSqlite,
+    BiMoonStarsFill,
+    BiMoonStars,
 );
 
 const app = createApp(App)

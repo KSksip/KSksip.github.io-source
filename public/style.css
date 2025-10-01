@@ -2,6 +2,7 @@
 */@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
 @theme {
     /*--font-IBMPlexSans: "IBMPlexSans", sans-serif;*/
     --font-IBMPlexMono: "IBM Plex Mono", Monospace;
@@ -9,7 +10,7 @@
 
 
     --color-accent: #0083b2;
-    --color-accent-2: #cb9000;
+    --color-accent-2: #4ac9e2;
 
     /*fox this make it run when not hovering anymore*/
     --animate-fade-underline: fade-underline 0.15s ease-out forwards;  
