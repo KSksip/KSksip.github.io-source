@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html data-theme="" id="html-root" class="">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KSksip</title>
+    <script type="module" crossorigin src="/assets/index-BPL3Fj0X.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-B8-JqOYT.css">
+  </head>
+  <body class="font-NunitoSans dark:bg-zinc-800 dark:text-white">
+
+    <script type="text/javascript">
+      //target root html element
+      const html = document.getElementById('html-root')
+      
+      if(!localStorage.getItem("theme")){
+
+        //set theme based on browser preference
+        if(window.matchMedia("(prefers-color-scheme: dark)").matches){
+          html?.classList.add('dark')
+          localStorage.setItem("theme", 'dark')
+          
+        } else {
+          localStorage.setItem("theme", 'light')
+        }
+
+      } else { 
+        //set theme based preference from last visit
+        if(localStorage.getItem("theme") == 'dark'){
+          html?.classList.add('dark')
+        }
+      }
+
+    </script>
+
+    <div id="app"></div>
+  </body>
+</html>
