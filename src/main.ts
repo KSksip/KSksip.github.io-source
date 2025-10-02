@@ -19,6 +19,7 @@ import {
     SiSqlite,
     BiMoonStarsFill,
     BiMoonStars,
+    SiMariadb,
 } from "oh-vue-icons/icons";
 
 addIcons(
@@ -36,6 +37,7 @@ addIcons(
     SiSqlite,
     BiMoonStarsFill,
     BiMoonStars,
+    SiMariadb,
 );
 
 const app = createApp(App)

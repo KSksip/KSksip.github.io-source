@@ -1,25 +1,22 @@
 <script setup lang="ts">
-import {ref} from 'vue'
+import {ref, type Ref} from 'vue'
 
+interface Tech {
+    [key: string]: {
+        icon: string,
+        name: string,
+    }[]
+}
 
-
-const tech = ref({
-    frontEnd: [
-        { 
-            icon: "co-vue-js",
-            name: "VueJS",
-        },
-        { 
-            icon: "si-tailwindcss",
-            name: "Tailwindcss",
-        },
+const tech: Tech = {
+    Languages: [
         { 
             icon: "co-typescript",
             name: "Typescript",
         },
-        { 
-            icon: "co-nuxt-js",
-            name: "NuxtJS",
+        {
+            icon: "co-javascript",
+            name: "Javascript",
         },
         { 
             icon: "co-html5",
@@ -29,21 +26,17 @@ const tech = ref({
             icon: "io-logo-css3",
             name: "CSS",
         },
-        { 
-            icon: "bi-bootstrap-fill",
-            name: "Bootstrap",
-        },
     ],
 
 
-    backEnd: [
-        {
-            icon: "co-typescript",
-            name: "Typescript",
+    Frameworks: [
+        { 
+            icon: "co-vue-js",
+            name: "VueJS",
         },
-        {
-            icon: "co-go",
-            name: "Go",
+        { 
+            icon: "si-tailwindcss",
+            name: "Tailwind CSS",
         },
         {
             icon: "co-nuxt-js",
@@ -53,12 +46,30 @@ const tech = ref({
             icon: "si-express",
             name: "ExpressJS",
         },
+                { 
+            icon: "bi-bootstrap-fill",
+            name: "Bootstrap",
+        },
+    ],
+
+    Database: [
         {
             icon: "si-sqlite",
             name: "SQLite"  
         },
+        {
+            icon: "si-mariadb",
+            name: "MariaDB"
+        }
     ],
-})
+
+    Exploring: [
+        {
+            icon: "co-go",
+            name: "Go",
+        },
+    ]
+}
 
 </script>
 
@@ -85,11 +96,12 @@ const tech = ref({
     </div>
 
     <div class="mt-12">
+        <h2 class="text-3xl font-bold dark:text-accent-2 text-accent text-center md:text-start">Skills</h2>
         <div class="border-t-1 border-b-1 md:border-1 dark:border-zinc-700 border-zinc-200 md:rounded-md inset-shadow-sm px-8 pt-4 pb-8 mt-2">
-            <div v-for="i in 2" class="even:mt-10">
-                <h2 class="text-2xl dark:text-accent-2 text-center md:text-start font-bold text-accent">{{ i == 1 ? "Front-end" : "Back-end" }}</h2>
+            <div v-for="key of Object.keys(tech)" class="nth-[n+2]:mt-10">
+                <h2 class="text-2xl text-center md:text-start font-bold">{{ key }}</h2>
                 <div class="flex justify-center md:justify-start gap-2 mt-2 flex-wrap">
-                    <div v-for="item in i == 1 ? tech.frontEnd : tech.backEnd"
+                    <div v-for="item of tech[key]"
                     class="gap-1 flex border-1 dark:bg-zinc-700 bg-white dark:border-zinc-600 border-zinc-300 rounded-full px-4 py-2 font-bold shadow-md
                     hover:scale-105 transition-transform">
                         <v-icon class="size-6" :name="item.icon"></v-icon>
