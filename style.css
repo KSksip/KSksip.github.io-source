@@ -24,4 +24,20 @@
             transform: translateY(0.2em);    
         }    
     }
+
+    --animate-fade-in: fade-in 0.2s ease-out forwards;
+    @keyframes fade-in {
+    0% {
+            opacity: 0;
+        }
+    100% {
+            opacity: 1;
+        }
+    }
+
+    
+}
+
+html * {
+    @apply transition-colors duration-250 delay-50;
 }
