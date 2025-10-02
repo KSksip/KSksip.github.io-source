@@ -45,7 +45,10 @@ function toggleDarkMode(){
           </div>
       </nav>
     </div>
-    <RouterView />
+    
+    <div class="py-8 cursor-default md:w-200 mx-auto">
+      <RouterView />
+    </div>
   </div>
 </template>
 
